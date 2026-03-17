@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#fff0f5"/>
+      <stop offset="50%"  stop-color="#fce4ec"/>
+      <stop offset="100%" stop-color="#f8bbd9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#e91e8c"/>
+      <stop offset="100%" stop-color="#f06292"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="50"   cy="50"  r="120" fill="#ffb7c5" opacity="0.15"/>
+  <circle cx="1150" cy="580" r="160" fill="#f48fb1" opacity="0.15"/>
+  <circle cx="1100" cy="80"  r="80"  fill="#ffb7c5" opacity="0.12"/>
+  <circle cx="100"  cy="560" r="90"  fill="#f48fb1" opacity="0.12"/>
+
+  <!-- Petal decorations top-left -->
+  <text x="30"  y="120" font-size="60" opacity="0.35">🌸</text>
+  <text x="100" y="60"  font-size="40" opacity="0.25">🌸</text>
+  <text x="10"  y="200" font-size="35" opacity="0.20">🌸</text>
+
+  <!-- Petal decorations top-right -->
+  <text x="1090" y="100" font-size="60" opacity="0.35">🌸</text>
+  <text x="1130" y="160" font-size="40" opacity="0.25">🌸</text>
+  <text x="1060" y="50"  font-size="35" opacity="0.20">🌸</text>
+
+  <!-- Petal decorations bottom -->
+  <text x="50"   y="610" font-size="55" opacity="0.30">🌸</text>
+  <text x="1100" y="620" font-size="50" opacity="0.28">🌸</text>
+  <text x="560"  y="625" font-size="40" opacity="0.20">🌸</text>
+
+  <!-- Top decorative line -->
+  <rect x="440" y="130" width="320" height="2" rx="1" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Brand icon large -->
+  <text x="600" y="230" font-size="80" text-anchor="middle">🌸</text>
+
+  <!-- Main title -->
+  <text x="600" y="320"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="72" font-weight="700"
+        text-anchor="middle"
+        fill="#c2185b">Makeup Du Du</text>
+
+  <!-- Tagline -->
+  <text x="600" y="385"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="32" font-style="italic"
+        text-anchor="middle"
+        fill="#e91e8c" opacity="0.85">Nơi Sắc Đẹp Nở Rộ</text>
+
+  <!-- Bottom decorative line -->
+  <rect x="440" y="410" width="320" height="2" rx="1" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Services tagline -->
+  <text x="600" y="470"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        text-anchor="middle"
+        fill="#880e4f" opacity="0.75">Cô Dâu · Dự Tiệc · Sự Kiện · Chụp Ảnh</text>
+
+  <!-- Stats row -->
+  <text x="330" y="545"
+        font-family="Arial, sans-serif" font-size="20" font-weight="700"
+        text-anchor="middle" fill="#ad1457">500+ Khách Hàng</text>
+  <text x="600" y="545"
+        font-family="Arial, sans-serif" font-size="20" font-weight="700"
+        text-anchor="middle" fill="#ad1457">5+ Năm Kinh Nghiệm</text>
+  <text x="870" y="545"
+        font-family="Arial, sans-serif" font-size="20" font-weight="700"
+        text-anchor="middle" fill="#ad1457">98% Hài Lòng</text>
+
+  <!-- URL -->
+  <text x="600" y="600"
+        font-family="Arial, sans-serif" font-size="18"
+        text-anchor="middle"
+        fill="#c2185b" opacity="0.55">makeup-dudu.vercel.app</text>
+</svg>
