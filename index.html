@@ -398,82 +398,64 @@
   <!-- ══════════════════ BOOKING ══════════════════ -->
   <section class="booking section-pad" id="booking">
     <div class="container">
-      <div class="booking-wrapper">
-        <!-- Info side -->
-        <div class="booking-info">
-          <p class="section-eyebrow">✦ Liên Hệ Đặt Lịch ✦</p>
-          <h2 class="section-title white">Sẵn Sàng Tỏa Sáng?</h2>
-          <p class="booking-desc">
-            Hãy để Makeup Du Du đồng hành cùng bạn trong những khoảnh khắc đặc biệt nhất.
-            Liên hệ ngay để được tư vấn miễn phí!
-          </p>
-          <div class="contact-list">
-            <div class="contact-item">
-              <i class="fa-brands fa-facebook"></i>
-              <a href="https://www.facebook.com/profile.php?id=100029456134488" target="_blank" rel="noopener noreferrer">Makeup Du Du – Facebook</a>
-            </div>
-            <div class="contact-item">
-              <svg class="zalo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                <path d="M25 2C12.3 2 2 12.3 2 25s10.3 23 23 23 23-10.3 23-23S37.7 2 25 2zm9.6 31.3H16.4l10.2-14.6H17v-2.9h17.9L24.7 30.4h9.9v2.9z"/>
-              </svg>
-              <a href="https://zalo.me/0973086291" target="_blank" rel="noopener noreferrer">Zalo: 0973086291</a>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <a href="tel:0973086291">0973 086 291</a>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Thị Tứ Thạch Châu – Mai Phụ – Hà Tĩnh</span>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <p class="section-eyebrow booking-eyebrow">✦ Liên Hệ Đặt Lịch ✦</p>
+        <h2 class="section-title white">Sẵn Sàng Tỏa Sáng?</h2>
+        <p class="booking-desc">
+          Nhắn tin qua Zalo hoặc Facebook để được tư vấn miễn phí và đặt lịch nhanh nhất nhé!
+        </p>
+      </div>
 
-        <!-- Form side -->
-        <div class="booking-form-wrap">
-          <form class="booking-form" id="booking-form">
-            <h3>Đặt Lịch Ngay</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Họ & Tên <span class="required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Nguyễn Thị Hoa" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Số Điện Thoại <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@example.com" />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="service">Dịch Vụ <span class="required">*</span></label>
-                <select id="service" name="service" required>
-                  <option value="">-- Chọn dịch vụ --</option>
-                  <option>Makeup Cô Dâu</option>
-                  <option>Makeup Dự Tiệc</option>
-                  <option>Makeup Sự Kiện</option>
-                  <option>Makeup Tự Nhiên</option>
-                  <option>Makeup Chụp Ảnh</option>
-                  <option>Makeup Biên Tập</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="date">Ngày Hẹn <span class="required">*</span></label>
-                <input type="date" id="date" name="date" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="notes">Ghi Chú Thêm</label>
-              <textarea id="notes" name="notes" rows="3" placeholder="Phong cách mong muốn, địa điểm, yêu cầu đặc biệt..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary full-width">
-              <i class="fa-regular fa-calendar-check"></i> Gửi Yêu Cầu Đặt Lịch
-            </button>
-          </form>
-        </div>
+      <div class="contact-cards">
+
+        <a href="https://zalo.me/0973086291" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--zalo">
+          <div class="contact-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true">
+              <path d="M25 2C12.3 2 2 12.3 2 25s10.3 23 23 23 23-10.3 23-23S37.7 2 25 2zm9.6 31.3H16.4l10.2-14.6H17v-2.9h17.9L24.7 30.4h9.9v2.9z"/>
+            </svg>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">Nhắn Zalo</span>
+            <span class="contact-card__value">0973 086 291</span>
+          </div>
+          <i class="fa-solid fa-arrow-right contact-card__arrow"></i>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100029456134488" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--fb">
+          <div class="contact-card__icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">Nhắn Facebook</span>
+            <span class="contact-card__value">Makeup Du Du</span>
+          </div>
+          <i class="fa-solid fa-arrow-right contact-card__arrow"></i>
+        </a>
+
+        <a href="tel:0973086291" class="contact-card contact-card--phone">
+          <div class="contact-card__icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">Gọi Điện Ngay</span>
+            <span class="contact-card__value">0973 086 291</span>
+          </div>
+          <i class="fa-solid fa-arrow-right contact-card__arrow"></i>
+        </a>
+
+      </div>
+
+      <p class="booking-location">
+        <i class="fa-solid fa-location-dot"></i>
+        Thị Tứ Thạch Châu – Mai Phụ – Hà Tĩnh
+      </p>
+
+      <div class="booking-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d473.13657957538834!2d105.892653425852!3d18.43410260651792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1773737187782!5m2!1svi!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Vị trí Makeup Du Du">
+        </iframe>
       </div>
     </div>
   </section>
@@ -517,12 +499,44 @@
     </div>
   </footer>
 
-  <!-- Success toast -->
-  <div class="toast" id="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    <span>Đặt lịch thành công! Chúng tôi sẽ liên hệ bạn sớm. 🌸</span>
-  </div>
-
   <script src="script.js"></script>
+
+  <!-- ══════════════════ CHAT WIDGET ══════════════════ -->
+  <div class="chat-widget" id="chat-widget">
+
+    <!-- Sub buttons (fan out when open) -->
+    <div class="chat-actions">
+      <a href="https://zalo.me/0973086291" target="_blank" rel="noopener noreferrer"
+         class="chat-action chat-action--zalo" aria-label="Nhắn Zalo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true">
+          <path d="M25 2C12.3 2 2 12.3 2 25s10.3 23 23 23 23-10.3 23-23S37.7 2 25 2zm9.6 31.3H16.4l10.2-14.6H17v-2.9h17.9L24.7 30.4h9.9v2.9z"/>
+        </svg>
+        <span class="chat-action__tip">Nhắn Zalo</span>
+      </a>
+
+      <a href="https://m.me/100029456134488" target="_blank" rel="noopener noreferrer"
+         class="chat-action chat-action--fb" aria-label="Nhắn Facebook">
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <span class="chat-action__tip">Facebook</span>
+      </a>
+
+      <a href="tel:0973086291"
+         class="chat-action chat-action--phone" aria-label="Gọi điện">
+        <i class="fa-solid fa-phone"></i>
+        <span class="chat-action__tip">Gọi Ngay</span>
+      </a>
+    </div>
+
+    <!-- Toggle button -->
+    <button class="chat-toggle" id="chat-toggle" aria-label="Liên hệ">
+      <span class="chat-toggle__icon chat-toggle__icon--open">
+        <i class="fa-solid fa-comment-dots"></i>
+      </span>
+      <span class="chat-toggle__icon chat-toggle__icon--close">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+    </button>
+
+  </div>
 </body>
 </html>

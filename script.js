@@ -151,12 +151,11 @@
   const cards = [
     ...document.querySelectorAll('.service-card'),
     ...document.querySelectorAll('.why-card'),
-    ...document.querySelectorAll('.booking-info'),
-    ...document.querySelectorAll('.booking-form-wrap'),
+    ...document.querySelectorAll('.contact-card'),
   ];
 
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const el    = entry.target;
         const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay') || 0) * 1000;
@@ -237,57 +236,6 @@
 
 
 /* ───────────────────────────────────────
-   5. BOOKING FORM SUBMIT
-─────────────────────────────────────── */
-(function initForm() {
-  const form  = document.getElementById('booking-form');
-  const toast = document.getElementById('toast');
-  if (!form) return;
-
-  /* Set min date to today */
-  const dateInput = document.getElementById('date');
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-  }
-
-  function showToast() {
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4500);
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    /* Simple validation feedback */
-    const required = form.querySelectorAll('[required]');
-    let valid = true;
-    required.forEach(input => {
-      if (!input.value.trim()) {
-        valid = false;
-        input.style.borderColor = '#ff4081';
-        input.addEventListener('input', () => (input.style.borderColor = ''), { once: true });
-      }
-    });
-
-    if (!valid) return;
-
-    /* Simulate submission */
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
-
-    setTimeout(() => {
-      form.reset();
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fa-regular fa-calendar-check"></i> Gửi Yêu Cầu Đặt Lịch';
-      showToast();
-    }, 1600);
-  });
-})();
-
-
-/* ───────────────────────────────────────
    6. SMOOTH SCROLL FOR ALL HASH LINKS
 ─────────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -323,4 +271,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }, { threshold: 0.4 });
 
   sections.forEach(s => io.observe(s));
+})();
+
+
+/* ───────────────────────────────────────
+   8. CHAT WIDGET
+─────────────────────────────────────── */
+(function initChatWidget() {
+  const widget = document.getElementById('chat-widget');
+  const toggle = document.getElementById('chat-toggle');
+  if (!widget || !toggle) return;
+
+  toggle.addEventListener('click', () => {
+    widget.classList.toggle('is-open');
+    const isOpen = widget.classList.contains('is-open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  /* Close when clicking outside */
+  document.addEventListener('click', (e) => {
+    if (!widget.contains(e.target)) {
+      widget.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 })();
