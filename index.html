@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makeup Du Du – Cherry Blossom Dream</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@500;700&family=Nunito:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Falling petals canvas -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">Makeup Du Du</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Trang Chủ</a></li>
+        <li><a href="#services">Dịch Vụ</a></li>
+        <li><a href="#why-us">Về Chúng Tôi</a></li>
+        <li><a href="#testimonials">Đánh Giá</a></li>
+        <li><a href="#booking" class="nav-cta">Đặt Lịch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <section class="hero" id="home">
+    <!-- Decorative SVG branches -->
+    <svg class="branch branch-left" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60,600 C80,480 20,380 100,280 C140,220 180,200 160,100 C150,50 130,20 150,0"
+            stroke="#e8a0b0" stroke-width="3" fill="none" opacity="0.7"/>
+      <path d="M100,400 C140,360 180,340 200,300" stroke="#e8a0b0" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M80,320 C60,280 40,260 20,230" stroke="#e8a0b0" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M130,220 C160,190 200,180 220,150" stroke="#e8a0b0" stroke-width="2" fill="none" opacity="0.5"/>
+      <!-- blossoms -->
+      <circle cx="160" cy="0"   r="8" fill="#ffb7c5" opacity="0.9"/>
+      <circle cx="157" cy="-7" r="5" fill="#ffd6e0" opacity="0.8"/>
+      <circle cx="165" cy="-5" r="5" fill="#ffb7c5" opacity="0.8"/>
+      <circle cx="200" cy="300" r="7" fill="#ffb7c5" opacity="0.9"/>
+      <circle cx="220" cy="150" r="7" fill="#ffd6e0" opacity="0.8"/>
+      <circle cx="20"  cy="230" r="6" fill="#ffb7c5" opacity="0.7"/>
+    </svg>
+
+    <svg class="branch branch-right" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
+      <path d="M240,600 C220,480 280,380 200,280 C160,220 120,200 140,100 C150,50 170,20 150,0"
+            stroke="#e8a0b0" stroke-width="3" fill="none" opacity="0.7"/>
+      <path d="M200,400 C160,360 120,340 100,300" stroke="#e8a0b0" stroke-width="2.5" fill="none" opacity="0.6"/>
+      <path d="M220,320 C240,280 260,260 280,230" stroke="#e8a0b0" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M170,220 C140,190 100,180 80,150" stroke="#e8a0b0" stroke-width="2" fill="none" opacity="0.5"/>
+      <circle cx="150" cy="0"   r="8" fill="#ffb7c5" opacity="0.9"/>
+      <circle cx="100" cy="300" r="7" fill="#ffb7c5" opacity="0.9"/>
+      <circle cx="80"  cy="150" r="7" fill="#ffd6e0" opacity="0.8"/>
+      <circle cx="280" cy="230" r="6" fill="#ffb7c5" opacity="0.7"/>
+    </svg>
+
+    <div class="hero-content">
+      <p class="hero-subtitle">✦ Chuyên Nghiệp · Tinh Tế · Sang Trọng ✦</p>
+      <h1 class="hero-title">
+        <span class="title-script">Makeup</span>
+        <span class="title-serif">Du Du</span>
+      </h1>
+      <p class="hero-tagline">Nơi Sắc Đẹp Nở Rộ – Như Hoa Đào Mùa Xuân</p>
+      <p class="hero-desc">
+        Chúng tôi mang đến vẻ đẹp hoàn hảo nhất trong những khoảnh khắc đáng nhớ của bạn —
+        từ ngày cưới, tiệc sang trọng cho đến sự kiện đặc biệt.
+      </p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> Đặt Lịch Ngay
+        </a>
+        <a href="#services" class="btn btn-outline">Khám Phá Dịch Vụ</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">500<sup>+</sup></span>
+          <span class="stat-label">Khách Hàng</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5<sup>+</sup></span>
+          <span class="stat-label">Năm Kinh Nghiệm</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">98<sup>%</sup></span>
+          <span class="stat-label">Hài Lòng</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Cuộn xuống</span>
+      <i class="fa-solid fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SERVICES ══════════════════ -->
+  <section class="services section-pad" id="services">
+    <div class="section-deco-top"></div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Dịch Vụ Của Chúng Tôi ✦</p>
+        <h2 class="section-title">Gói Dịch Vụ Makeup</h2>
+        <p class="section-desc">Mỗi gói dịch vụ được thiết kế tỉ mỉ để tôn vinh vẻ đẹp riêng của bạn</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" style="--delay:0s">
+          <div class="card-icon">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h3>Makeup Cô Dâu</h3>
+          <p>Trọn gói makeup cô dâu sang trọng, tinh tế cho ngày trọng đại — lâu trôi, rạng rỡ suốt 12 giờ.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Tư vấn phong cách cá nhân</li>
+            <li><i class="fa-solid fa-check"></i> Makeup + Làm tóc</li>
+            <li><i class="fa-solid fa-check"></i> Retouching trong ngày</li>
+          </ul>
+          <span class="service-price">Từ 1.500.000đ</span>
+        </div>
+
+        <div class="service-card featured" data-aos="fade-up" style="--delay:0.1s">
+          <div class="card-badge">Phổ Biến Nhất</div>
+          <div class="card-icon">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h3>Makeup Dự Tiệc</h3>
+          <p>Tỏa sáng trong mọi buổi tiệc, sự kiện sang trọng với lớp makeup quyến rũ, thu hút ánh nhìn.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Makeup ánh sắc chuyên nghiệp</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi tông da</li>
+            <li><i class="fa-solid fa-check"></i> Sản phẩm cao cấp</li>
+          </ul>
+          <span class="service-price">Từ 600.000đ</span>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" style="--delay:0.2s">
+          <div class="card-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3>Makeup Sự Kiện</h3>
+          <p>Tự tin bước lên sân khấu, lễ tốt nghiệp, họp báo với lớp makeup hoàn hảo dưới mọi ánh đèn.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Phù hợp ánh sáng sân khấu</li>
+            <li><i class="fa-solid fa-check"></i> Bền màu lâu trôi</li>
+            <li><i class="fa-solid fa-check"></i> Tư vấn phong cách</li>
+          </ul>
+          <span class="service-price">Từ 500.000đ</span>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" style="--delay:0.3s">
+          <div class="card-icon">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3>Makeup Tự Nhiên</h3>
+          <p>Vẻ đẹp tươi sáng, tự nhiên cho ngày thường — "no-makeup makeup" cao cấp, nhẹ nhàng mà nổi bật.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Kỹ thuật skin-first</li>
+            <li><i class="fa-solid fa-check"></i> Mỹ phẩm dưỡng da</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp da nhạy cảm</li>
+          </ul>
+          <span class="service-price">Từ 350.000đ</span>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" style="--delay:0.4s">
+          <div class="card-icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <h3>Makeup Chụp Ảnh</h3>
+          <p>Lớp makeup được thiết kế riêng cho máy ảnh — hoàn hảo cho chụp ảnh kỷ yếu, lookbook, TVC.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Phối hợp với nhiếp ảnh gia</li>
+            <li><i class="fa-solid fa-check"></i> HD-ready, photogenic</li>
+            <li><i class="fa-solid fa-check"></i> Nhiều lần thay đổi look</li>
+          </ul>
+          <span class="service-price">Từ 700.000đ</span>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" style="--delay:0.5s">
+          <div class="card-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Makeup Biên Tập</h3>
+          <p>Nghệ thuật makeup sáng tạo, phá cách cho các bộ ảnh thời trang, tạp chí, và concept độc đáo.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Concept độc quyền</li>
+            <li><i class="fa-solid fa-check"></i> Kỹ thuật đặc biệt</li>
+            <li><i class="fa-solid fa-check"></i> Body painting tùy chọn</li>
+          </ul>
+          <span class="service-price">Từ 1.200.000đ</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-deco-bottom"></div>
+  </section>
+
+  <!-- ══════════════════ WHY CHOOSE US ══════════════════ -->
+  <section class="why-us section-pad" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Tại Sao Chọn Chúng Tôi ✦</p>
+        <h2 class="section-title">Cam Kết Của Makeup Du Du</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3>5+ Năm Kinh Nghiệm</h3>
+          <p>Đội ngũ nghệ nhân makeup với nhiều năm kinh nghiệm, không ngừng học hỏi xu hướng quốc tế.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3>Sản Phẩm Cao Cấp</h3>
+          <p>Chỉ sử dụng mỹ phẩm từ các thương hiệu danh tiếng hàng đầu — MAC, NARS, Charlotte Tilbury và hơn nữa.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Tận Tâm & Chu Đáo</h3>
+          <p>Lắng nghe từng mong muốn của khách hàng để tạo ra phong cách makeup phù hợp nhất với cá nhân bạn.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3>Đúng Giờ – Đúng Hẹn</h3>
+          <p>Cam kết đúng lịch hẹn, hoàn thành đúng tiến độ, không để bạn trễ bất kỳ khoảnh khắc quan trọng nào.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <h3>An Toàn & Sạch Sẽ</h3>
+          <p>Dụng cụ được vệ sinh, khử khuẩn sau mỗi lần sử dụng. Cam kết tiêu chuẩn vệ sinh cao nhất.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Makeup Tại Nhà</h3>
+          <p>Dịch vụ makeup tại địa điểm của bạn — studio, nhà riêng, khách sạn — tiện lợi và thoải mái tuyệt đối.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ TESTIMONIALS ══════════════════ -->
+  <section class="testimonials section-pad" id="testimonials">
+    <div class="section-deco-top"></div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Khách Hàng Nói Gì ✦</p>
+        <h2 class="section-title">Những Lời Yêu Thương</h2>
+        <p class="section-desc">Hàng trăm khách hàng đã tin tưởng và hài lòng với dịch vụ của chúng tôi</p>
+      </div>
+
+      <div class="testimonials-slider" id="testimonials-slider">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Mình đã dùng dịch vụ makeup cô dâu của Du Du cho ngày cưới. Thật sự tuyệt vời — lớp makeup
+              đẹp, bền suốt buổi, và Du Du rất tâm lý, hiểu ý mình muốn. Hôm đó mình đẹp nhất cuộc đời!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">LH</div>
+              <div class="author-info">
+                <strong>Linh Hương</strong>
+                <span>Cô dâu · Hà Nội</span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Mình chụp ảnh kỷ yếu với Du Du và kết quả vượt quá mong đợi! Makeup tự nhiên nhưng
+              cực kỳ photogenic. Bạn bè ai cũng hỏi chụp ở đâu makeup đẹp thế. Nhất định sẽ quay lại!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MT</div>
+              <div class="author-info">
+                <strong>Minh Thư</strong>
+                <span>Sinh viên · TP.HCM</span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Tôi thuê Du Du makeup cho sự kiện ra mắt sản phẩm. Chuyên nghiệp từ đầu đến cuối — đúng giờ,
+              làm việc nhanh, kết quả đẹp tuyệt vời dưới ánh đèn sân khấu. Rất đáng tiền!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">TN</div>
+              <div class="author-info">
+                <strong>Thu Ngân</strong>
+                <span>Doanh nhân · Đà Nẵng</span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Mình có làn da nhạy cảm và rất sợ makeup sẽ gây kích ứng. Nhưng Du Du đã tư vấn và dùng
+              sản phẩm phù hợp cho mình. Đẹp mà không bị kích ứng gì cả. Cảm ơn Du Du nhiều lắm! 💕"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">BP</div>
+              <div class="author-info">
+                <strong>Bảo Phương</strong>
+                <span>Giáo viên · Hà Nội</span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <div class="slider-controls">
+        <button class="slider-btn" id="prev-btn" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots" id="slider-dots"></div>
+        <button class="slider-btn" id="next-btn" aria-label="Next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="section-deco-bottom"></div>
+  </section>
+
+  <!-- ══════════════════ BOOKING ══════════════════ -->
+  <section class="booking section-pad" id="booking">
+    <div class="container">
+      <div class="booking-wrapper">
+        <!-- Info side -->
+        <div class="booking-info">
+          <p class="section-eyebrow">✦ Liên Hệ Đặt Lịch ✦</p>
+          <h2 class="section-title white">Sẵn Sàng Tỏa Sáng?</h2>
+          <p class="booking-desc">
+            Hãy để Makeup Du Du đồng hành cùng bạn trong những khoảnh khắc đặc biệt nhất.
+            Liên hệ ngay để được tư vấn miễn phí!
+          </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="fa-brands fa-facebook"></i>
+              <a href="https://www.facebook.com/profile.php?id=100029456134488" target="_blank" rel="noopener noreferrer">Makeup Du Du – Facebook</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-square-phone"></i>
+              <a href="https://zalo.me/0973086291" target="_blank" rel="noopener noreferrer">Zalo: 0973086291</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:0973086291">0973 086 291</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Thị Tứ Thạch Châu – Mai Phụ – Hà Tĩnh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div class="booking-form-wrap">
+          <form class="booking-form" id="booking-form">
+            <h3>Đặt Lịch Ngay</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Họ & Tên <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Nguyễn Thị Hoa" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Số Điện Thoại <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="email@example.com" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Dịch Vụ <span class="required">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="">-- Chọn dịch vụ --</option>
+                  <option>Makeup Cô Dâu</option>
+                  <option>Makeup Dự Tiệc</option>
+                  <option>Makeup Sự Kiện</option>
+                  <option>Makeup Tự Nhiên</option>
+                  <option>Makeup Chụp Ảnh</option>
+                  <option>Makeup Biên Tập</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Ngày Hẹn <span class="required">*</span></label>
+                <input type="date" id="date" name="date" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="notes">Ghi Chú Thêm</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Phong cách mong muốn, địa điểm, yêu cầu đặc biệt..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              <i class="fa-regular fa-calendar-check"></i> Gửi Yêu Cầu Đặt Lịch
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer">
+    <div class="footer-blossom"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <p class="footer-logo">🌸 Makeup Du Du</p>
+          <p class="footer-tagline">Nơi Sắc Đẹp Nở Rộ</p>
+          <p class="footer-copy">Mang đến vẻ đẹp hoàn hảo trong mọi khoảnh khắc quan trọng của cuộc đời bạn.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Dịch Vụ</h4>
+          <ul>
+            <li><a href="#services">Makeup Cô Dâu</a></li>
+            <li><a href="#services">Makeup Dự Tiệc</a></li>
+            <li><a href="#services">Makeup Sự Kiện</a></li>
+            <li><a href="#services">Makeup Tự Nhiên</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Theo Dõi Chúng Tôi</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100029456134488" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://zalo.me/0973086291" target="_blank" rel="noopener noreferrer" aria-label="Zalo"><i class="fa-brands fa-square-phone"></i></a>
+            <a href="tel:0973086291" aria-label="Điện thoại"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <p class="footer-hashtag">#MakeupDuDu #CherryBlossomBeauty</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Makeup Du Du. Tất cả quyền được bảo lưu. Made with 🌸 &amp; ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success toast -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Đặt lịch thành công! Chúng tôi sẽ liên hệ bạn sớm. 🌸</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
