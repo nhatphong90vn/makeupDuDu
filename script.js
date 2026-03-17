@@ -272,27 +272,3 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   sections.forEach(s => io.observe(s));
 })();
-
-
-/* ───────────────────────────────────────
-   8. CHAT WIDGET
-─────────────────────────────────────── */
-(function initChatWidget() {
-  const widget = document.getElementById('chat-widget');
-  const toggle = document.getElementById('chat-toggle');
-  if (!widget || !toggle) return;
-
-  toggle.addEventListener('click', () => {
-    widget.classList.toggle('is-open');
-    const isOpen = widget.classList.contains('is-open');
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  /* Close when clicking outside */
-  document.addEventListener('click', (e) => {
-    if (!widget.contains(e.target)) {
-      widget.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
