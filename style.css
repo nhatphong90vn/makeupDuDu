@@ -1205,7 +1205,7 @@ a.service-price:hover {
 }
 
 @media (max-width: 480px) {
-  .chat-widget { bottom: 20px; right: 16px; width: 54px; height: 54px; font-size: 1.5rem; }
+  .chat-widget { bottom: 50px; right: 16px; width: 54px; height: 54px; font-size: 1.5rem; }
 }
 
 /* ── Scroll-reveal helper ── */
